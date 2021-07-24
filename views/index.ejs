@@ -1,0 +1,35 @@
+<%- include("partials/header") -%>
+
+  <!-- <form action="/" method="POST">
+    Name:<input type="text" name="name" id="">
+    Branch: <input type="text" name="branch" id="">
+    Post: <textarea name="post" id="" cols="10" rows="10"></textarea>
+    <button type="submit">Submit</button>
+  </form> -->
+
+  <section class="fdb-block team-5">
+    <div class="container">
+      <div class="row text-center justify-content-center ">
+        <div class="col-8">
+          <h1>Hello People</h1>
+        </div>
+      </div>
+
+      <div class="row-70"></div>
+      <div class="row text-center justify-content-center">
+        <% person.forEach(function(p){ %>
+          <div class="col-lg-3 col-md-4 col-sm-6 m-sm-auto " >
+            <a  href="/posts/<%=p.name%>">
+            <img alt="image" class="img-fluid rounded-circle" src="img.jpg">
+            <h3><strong><%=p.name %></strong></h3>
+            <h3><%=p.branch %></h3>
+            <!-- <%p.posts.forEach(function(pp){ %>
+            <p><%=pp%></p>
+            <%}) %> -->
+          </a>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+  <%- include("partials/footer") -%>
